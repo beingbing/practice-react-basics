@@ -26,3 +26,18 @@ This problem will be there for all types of overlays.
 We have Portals to the rescue, from coding perspective, the code will be exactly same, but when
 the modal will be opened, its code will not appear alongside other UI code, as was written, but
 will be appended to the DOM, outside of the component structure.
+
+
+refs: they allow us to access other DOM elements, and work with them. 
+while getting input from user, at every keystroke, we were updating our state, but, we only needed
+that state to be updated, when we go to submit the form. This is one of the places where we can use
+refs.
+With refs we can setup a connection between HTML content which is being rendered and our JS code.
+Although, you can update DOM using refs, but rarely attempt that. Refs should be preferred where
+you just need to read the value. Never attempt to update the DOM using Refs, because that is not
+tracked by React.
+
+Uncontrolled component: component in which we access the value using refs, as it is not controlled by React.
+This uncontrolled component discussion generally arises around form/input related components.
+
+controlled component: state handled/read/updated by React.
