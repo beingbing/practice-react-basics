@@ -5,8 +5,8 @@ import Button from "./Button";
 
 const ErrorModal = (props) => {
   return (
-    <React.Fragment>
-      <div className={classes.backdrop} onClick={props.onOkay} />
+    <div>
+      <div className={classes.backdrop} onClick={props.onConfirm} />
       <Card className={classes.modal}>
         <header className={classes.header}>
           <h2>{props.title}</h2>
@@ -15,10 +15,10 @@ const ErrorModal = (props) => {
           <p>{props.message}</p>
         </div>
         <footer className={classes.actions}>
-          <Button onClick={props.onOkay}>Okay</Button>
+          <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
-    </React.Fragment>
+    </div>
   );
 };
 
