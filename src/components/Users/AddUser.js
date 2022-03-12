@@ -21,6 +21,12 @@ const AddUser = props => {
         console.log(enteredUserName, enteredAge);
         setEnteredAge(0);
         setEnteredUserName('');
+        const usr = {
+            name: enteredUserName,
+            age: enteredAge,
+            id: Math.random().toString(),
+        };
+        props.onAddUser(usr);
     }
 
     return (
